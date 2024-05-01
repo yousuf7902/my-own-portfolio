@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+  
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    letter-spacing: 1.5px;
+}
+
+.text-shadow{
+    text-shadow: 0px 0px 25px #FD6F00;
+}
+
+
+.html,.css,.c_plus_plus,.oop,.mysql,.p_solving{
+    position: relative;
+    background-color: #FD6F00;
+    z-index: 1;
+    animation: animate 0.7s ease-in-out forwards;
+}
+
+.html,.oop{
+    width: 90%;
+}
+.css{
+    width: 80%;
+    animation-delay: 0.1s;
+}
+.c_plus_plus,.mysql{
+    width: 85%;
+    animation-delay: 0.1s;
+}
+.p_solving{
+    width: 78%;
+    animation-delay: 0.1s;
+}
+
+@keyframes animate {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.tooltip{
+    position: absolute;
+    background-color: #FD6F00;
+    top:-40px;
+    right: -15px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding:0 5px;
+}
+
+.tooltip::before{
+    content: '';
+    position: absolute;
+    background-color:#FD6F00;
+    width:15px;
+    height:15px;
+    bottom: -5px;
+    left: 55%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index:-1;
+}
+
+.user-img{
+    box-shadow: 0px 0px 20px #FD6F00;
+}
+
+.project_box:hover img{
+    transform: scale(1.03);
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: "Youtuber";
+    color: #FD6F00;
+    animation: words 20s infinite;
+}
+
+.text-animation span::after{
+    content:"";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #1E1E1E;
+    border-left: 3px solid #FD6F00;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 25s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left:2px solid #FD6F00;
+    }
+}
+
+@keyframes words {
+    0%,
+    25%{
+        content:"Competitive Programmer";
+    }
+    26%,
+    50%{
+        content:"Software Engineer";
+    }
+    51%,
+    75%{
+        content: "Programming Enthusiast";
+    }
+    76%,
+    100%{
+        content: "Ready to explore new things";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Yousuf Hassan</title>
+    <link rel="stylesheet" href="/dist/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="font-urbanist bg-bg_primary">
+    <!-- Nav Bar Section -->
+    <nav
+        class="container mx-auto mt-8 rounded-full max-w-lg flex justify-between md:justify-around items-center text-sm gap-5 px-6 py-3 bg-black text-white md:max-w-7xl md:text-lg lg:text-2xl">
+        <div class="hidden md:flex md:flex-1 md:justify-evenly">
+            <a href="/dist/index.html" class="p-2 hover:bg-primary hover:rounded-2xl">Home</a>
+            <a href="#about" class="p-2 hover:bg-primary hover:rounded-2xl">About</a>
+            <a href="#about" class="p-2 hover:bg-primary hover:rounded-2xl">Skills</a>
+        </div>
+        <div class="flex gap-2 items-center uppercase font-bold text-lg lg:text-3xl">
+            <span>Yousuf</span>
+            <span class="text-primary text-shadow">Hassan</span>
+        </div>
+        <div class="hidden md:flex md:flex-1 md:justify-evenly">
+            <a href="#projects" class="p-2 hover:bg-primary hover:rounded-2xl">Projects</a>
+            <a href="#contact" class="p-2 hover:bg-primary hover:rounded-2xl">Contact</a>
+            <a href="https://drive.google.com/file/d/14l0fF6ctxpnQiwiYRSCDmKpo1uaSoYPx/view?usp=sharing" target="_blank"
+                class="p-2 bg-primary rounded-2xl hover:bg-transparent hover:text-primary hover:underline hover:decoration-primary hover:decoration-2 hover:underline-offset-8">Resume</a>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="md:hidden" id="m-icon">
+            <i class="fa-solid fa-bars text-3xl"></i>
+        </div>
+        <div class="hidden" id="cross-icon">
+            <i class="fa-solid fa-xmark text-3xl"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+
+    <div id="m-menu" class="hidden">
+        <div class="container max-w-sm mx-auto duration-75 ease-in flex flex-col gap-3 text-xl text-white font-semibold bg-black items-center justify-center md:hidden"
+        id="m-menu">
+            <a href="/dist/index.html" class="p-2 text-center hover:bg-primary hover:rounded-2xl w-full">Home</a>
+            <a href="#about" class="p-2 text-center hover:bg-primary hover:rounded-2xl w-full">About</a>
+            <a href="#projects" class="p-2 text-center hover:bg-primary hover:rounded-2xl w-full">Projects</a>
+            <a href="#contact" class="p-2 text-center hover:bg-primary hover:rounded-2xl w-full">Contact</a>
+            <a href="https://drive.google.com/file/d/14l0fF6ctxpnQiwiYRSCDmKpo1uaSoYPx/view?usp=sharing" target="_blank"
+                class="p-2 text-center bg-primary rounded-2xl hover:bg-transparent hover:text-primary hover:underline hover:decoration-primary hover:decoration-2 hover:underline-offset-8 mb-5 w-full">Resume</a>
+        </div>
+    </div>
+    
+
+    <!-- Header Section -->
+    <header
+        class="container max-w-7xl mx-auto flex flex-col-reverse gap-10 mt-12 md:mt-20 justify-between items-center px-6 lg:flex-row lg:gap-10 xl:gap-12">
+        <!-- Left Section -->
+        <div
+            class="left max-w-3xl flex flex-col justify-center items-center gap-5 px-5 text-white flex-1 lg:items-start">
+            <h3 class="text-3xl lg:text-4xl font-bold"><span class="text-primary text-shadow">Hi, </span>Myself</h3>
+            <p class="text-3xl lg:text-5xl  uppercase mt-1 font-bold">Yousuf <span class="text-primary">Hassan</span>
+            </p>
+            <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl uppercase font-semibold text-animation text-center">
+                <span></span></h3>
+            <p class="text-xl text-center lg:text-left font-semibold">I have a strong background in problem-solving
+                through programming, data-structure and algorithms, competitive programming, and have experience in
+                mentoring at University Programming Wing where I guide beginners in solving programming problems.</p>
+            <button type="button"
+                class="bg-primary mt-5 px-7 py-2 rounded-full text-xl font-semibold hover:bg-black hover:text-primary hover:scale-110">
+                <a href="mailto:yousufhassan04@gmail.com" target="_blank">Hire Me</a>
+            </button>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right flex flex-col gap-5 justify-between items-center">
+            <div class="">
+                <img src="/img/myself.jpg" alt="Yousuf"
+                    class="w-72 h-72 md:w-80 md:h-80 border-4 p-2 border-primary rounded-full object-fill shadow-xl user-img">
+            </div>
+            <div class="text-2xl lg:text-3xl xl:text-4xl mt-2 space-x-3 text-primary">
+                <a href="https://www.facebook.com/yousuf.hassan.7902/" target="_blank">
+                    <i class="fa-brands fa-facebook hover:text-white"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yousuf-hassan-7902" target="_blank">
+                    <i class="fa-brands fa-linkedin hover:text-white"></i>
+                </a>
+                <a href="https://github.com/yousuf7902/" target="_blank">
+                    <i class="fa-brands fa-github hover:text-white"></i>
+                </a>
+                <a href="mailto:yousufhassan04@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope hover:text-white"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- About & Skills Section -->
+        <section id="about" class="mt-10 md:mt-32 pt-1">
+            <div
+                class="container mx-auto max-w-7xl mt-20 px-6 flex flex-col justify-between gap-10 mb-16 md:gap-8 lg:gap-32 lg:flex-row lg:mt-36">
+                <!-- About Section -->
+                <div class="px-5 flex flex-col gap-5 text-white flex-1 lg:items-start">
+                    <h1 class="text-4xl font-bold text-center lg:text-5xl uppercase">About<span
+                            class="text-primary text-shadow"> Me</span></h1>
+                    <h3
+                        class="text-lg md:text-xl lg:text-2xl xl:text-3xl uppercase font-semibold text-animation text-center">
+                        <span></span></h3>
+                    <p class="text-xl text-center lg:text-left font-semibold">I am currently pursuing a Bachelor of
+                        Science degree in Computer Science and Engineering at the International University of Business
+                        Agriculture and Technology(IUBAT).</p>
+                </div>
+                <!-- Skills Section -->
+                <div class="flex-1 text-white mt-14 lg:mt-0">
+                    <h1 class="text-4xl font-bold mb-8 text-center lg:text-5xl uppercase">Technical <span
+                            class="text-primary text-shadow">Skills</span></h1>
+                    <div class="technical-bars max-w-md mx-auto mt-5 px-5 space-y-5 md:max-w-xl lg:max-w-5xl xl:max-w-7xl">
+                        <div class="bar space-y-1">
+                            <div class="info">
+                                <i class="fa-brands fa-html5 text-2xl mr-1"></i>
+                                <span class="text-xl">HTML</span>
+                            </div>
+                            <div class="progress-line w-full h-3 rounded-lg bg-gray-950 ">
+                                <div class="html h-3 bg-primary rounded-lg" style="max-width: 90%">
+                                    <span class="tooltip">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar space-y-1">
+                            <div class="info">
+                                <i class="fa-brands fa-css3-alt text-2xl mr-1"></i>
+                                <span class="text-xl">CSS</span>
+                            </div>
+                            <div class="progress-line w-full h-3 rounded-lg bg-gray-950 ">
+                                <div class="css h-3 bg-primary rounded-lg" style="max-width: 80%">
+                                    <span class="tooltip">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar space-y-1">
+                            <div class="info">
+                                <i class="fa-solid fa-code text-2xl mr-1"></i>
+                                <span class="text-xl">C++</span>
+                            </div>
+                            <div class="progress-line w-full h-3 rounded-lg bg-gray-950 ">
+                                <div class="c_plus_plus h-3 bg-primary rounded-lg" style="max-width: 85%">
+                                    <span class="tooltip">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar space-y-1">
+                            <div class="info">
+                                <i class="fa-solid fa-code text-2xl mr-1"></i>
+                                <span class="text-xl">OOP</span>
+                            </div>
+                            <div class="progress-line w-full h-3 rounded-lg bg-gray-950 ">
+                                <div class="oop h-3 bg-primary rounded-lg" style="max-width: 90%">
+                                    <span class="tooltip">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar space-y-1">
+                            <div class="info">
+                                <i class="fa-solid fa-code text-2xl mr-1"></i>
+                                <span class="text-xl">MySql</span>
+                            </div>
+                            <div class="progress-line w-full h-3 rounded-lg bg-gray-950 ">
+                                <div class="mysql h-3 bg-primary rounded-lg" style="max-width: 85%">
+                                    <span class="tooltip">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar space-y-1">
+                            <div class="info">
+                                <i class="fa-solid fa-code text-2xl mr-1"></i>
+                                <span class="text-xl">Problem Solving</span>
+                            </div>
+                            <div class="progress-line w-full h-3 rounded-lg bg-gray-950 ">
+                                <div class="p_solving h-3 bg-primary rounded-lg" style="max-width: 78%">
+                                    <span class="tooltip">78%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mt-20 md:mt-32 pt-5">
+            <div>
+                <h1 class="text-4xl lg:text-5xl font-bold text-white text-center uppercase">Projects</h1>
+            </div>
+            <div
+                class="container max-w-md mx-auto grid-rows-3 items-center space-y-10 lg:space-y-0 px-6 mt-14 lg:grid-rows-none lg:gap-x-10  lg:grid lg:grid-cols-3 md:max-w-xl lg:max-w-5xl xl:max-w-7xl">
+                <!-- Project 1 -->
+                <div
+                    class="project_box rounded-xl border-4 border-primary flex flex-col overflow-hidden gap-5 hover:shadow-lg hover:shadow-primary">
+                    <img src="/img/Projects1.jpg" alt="" class="w-full h-48 duration-75 ease-in object-fill">
+                    <div class="projects_info flex flex-col justify-center items-center text-center gap-5">
+                        <h4 class="text-2xl font-bold text-primary">Blogs Website</h4>
+                        <p class="text-white px-2 font-semibold">Simple Blog Website project by using C# Asp.net MVC
+                            model.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7093648505323352064/"
+                            target="_blank">
+                            <i class="fas fa-link text-white px-8 py-4 bg-primary rounded-full mb-3 hover:opacity-60"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="project_box rounded-xl border-4 border-primary flex flex-col overflow-hidden gap-5 hover:shadow-lg hover:shadow-primary">
+                    <img src="/img/Projects2.jpg" alt="" class="w-full h-48 duration-75 ease-in object-fill">
+                    <div
+                        class="projects_info flex flex-col justify-center items-center text-center gap-5 cursor-pointer">
+                        <h4 class="text-2xl font-bold text-primary">E-Commerce Website</h4>
+                        <p class="text-white font-semibold px-2">Frontend part is done by using raw HTML5 & CSS3</p>
+                        <a href="https://e-commerce-website-html-css.netlify.app/" target="_blank">
+                            <i class="fas fa-link text-white px-8 py-4 bg-primary rounded-full mb-3 hover:opacity-60"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="project_box rounded-xl border-4 border-primary flex flex-col overflow-hidden gap-5 hover:shadow-lg hover:shadow-primary">
+                    <img src="/img/Projects3.jpg" alt="" class="w-full h-48 duration-75 ease-in object-fill">
+                    <div
+                        class="projects_info flex flex-col justify-center items-center text-center gap-5 cursor-pointer">
+                        <h4 class="text-2xl font-bold text-primary">Recipies Website</h4>
+                        <p class="text-white font-semibold px-2">Frontend part is done by using raw HTML5 & CSS
+                            framework Tailwind</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7190806523759980544/"
+                            target="_blank" class="">
+                            <i class="fas fa-link text-white px-8 py-4 bg-primary rounded-full mb-3 hover:opacity-60"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mt-20 md:mt-32 pt-5">
+            <div>
+                <h1 class="text-4xl lg:text-5xl text-white font-bold uppercase text-center px-5"><span
+                        class="text-shadow text-primary">Let's </span>Works Together</h1>
+            </div>
+            <div class="container max-w-4xl mx-auto px-6 mt-10">
+                <div class="contact_details">
+                    <form action="" class="flex flex-col gap-5 justify-center">
+                        <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
+                            <input type="text"
+                                class="p-3 rounded-lg w-5/6 lg:p-4 md:w-full outline-none border-4 border-primary bg-bg_primary text-primary"
+                                required placeholder="Full Name...">
+                            <input type="email"
+                                class="p-3 rounded-lg w-5/6 lg:p-4 md:w-full outline-none border-4 border-primary bg-bg_primary text-primary"
+                                required placeholder="Email...">
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
+                            <input type="number"
+                                class="p-3 rounded-lg w-5/6 lg:p-4 md:w-full outline-none border-4 border-primary bg-bg_primary text-primary"
+                                placeholder="Mobile Number" required">
+                            <input type="text"
+                                class="p-3 rounded-lg w-5/6 lg:p-4 md:w-full outline-none border-4 border-primary bg-bg_primary text-primary"
+                                placeholder="Email Subject" required>
+                        </div>
+
+                        <textarea name="" id=""
+                            class=" mx-auto p-3 rounded-lg w-5/6 lg:p-4 md:w-full outline-none border-4 border-primary bg-bg_primary text-primary"
+                            cols="30" rows="10" placeholder="Your Message...."></textarea>
+                        <input type="submit" value="Send"
+                            class="text-white font-bold bg-primary mt-3 px-7 py-2 rounded-full text-xl w-32 mx-auto cursor-pointer  hover:bg-black hover:text-primary hover:scale-110">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="mt-20 md:mt-32">
+        <div class="flex flex-col gap-8 justify-center items-center">
+            <div class="text-4xl md:text-5xl uppercase font-bold">
+                <a href="./index.html">
+                    <span class="text-white">Yousuf</span>
+                    <span class="text-primary text-shadow">Hassan</span>
+                </a>
+            </div>
+            <div class="text-white text-xl flex flex-col items-center md:flex-row md:space-x-6 font-bold">
+                <a href="/dist/index.html" class="p-2 hover:bg-primary hover:rounded-2xl">Home</a>
+                <a href="#about" class="p-2 hover:bg-primary hover:rounded-2xl">About Me</a>
+                <a href="#projects" class="p-2 hover:bg-primary hover:rounded-2xl">Projects</a>
+                <a href="#contact" class="p-2 hover:bg-primary hover:rounded-2xl">Contact</a>
+            </div>
+            <div class="text-3xl lg:text-4xl text-primary space-x-10">
+                <a href="https://www.facebook.com/yousuf.hassan.7902/" target="_blank">
+                    <i class="fa-brands fa-facebook hover:text-white"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yousuf-hassan-7902" target="_blank">
+                    <i class="fa-brands fa-linkedin hover:text-white"></i>
+                </a>
+                <a href="https://github.com/yousuf7902/" target="_blank">
+                    <i class="fa-brands fa-github hover:text-white"></i>
+                </a>
+                <a href="mailto:yousufhassan04@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope hover:text-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="bg-black mt-14 p-5 text-white font-bold text-center">
+            <p>Copyright &copy; 2024 by Yousuf <span class="text-primary text-shadow">Hassan</span> | All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="/dist/script.js"></script>
+</body>
+
+</html>
