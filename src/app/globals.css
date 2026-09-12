@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  letter-spacing: 1.5px;
+}
+
+/* ===== Custom Utilities ===== */
+.text-shadow {
+  text-shadow: 0px 0px 25px #FD6F00;
+}
+
+/* ===== Profile Image Glow ===== */
+.user-img {
+  box-shadow: 0px 0px 20px #FD6F00;
+}
+
+/* ===== Skill Bar Animation ===== */
+.skill-bar-fill {
+  position: relative;
+  background-color: #FD6F00;
+  z-index: 1;
+  animation: animateBar 0.7s ease-in-out forwards;
+}
+
+@keyframes animateBar {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===== Skill Tooltip ===== */
+.tooltip {
+  position: absolute;
+  background-color: #FD6F00;
+  top: -40px;
+  right: -15px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 5px;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  background-color: #FD6F00;
+  width: 15px;
+  height: 15px;
+  bottom: -5px;
+  left: 55%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+/* ===== Project Card Hover ===== */
+.project_box:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== TypeWriter Cursor ===== */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: #FD6F00;
+  margin-left: 4px;
+  animation: blink 0.6s infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===== Scroll Fade In ===== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Timeline ===== */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #FD6F00;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #FD6F00;
+  border: 3px solid #1E1E1E;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 24px;
+  z-index: 2;
+  box-shadow: 0 0 10px #FD6F00;
+}
+
+@media (max-width: 768px) {
+  .timeline-dot {
+    left: 20px;
+  }
+}
+
+/* ===== Achievement Counter ===== */
+.achievement-card {
+  background: linear-gradient(135deg, rgba(253, 111, 0, 0.08), rgba(253, 111, 0, 0.02));
+  border: 2px solid rgba(253, 111, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  border-color: #FD6F00;
+  box-shadow: 0 0 20px rgba(253, 111, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* ===== Project Modal ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: #1E1E1E;
+  border: 2px solid #FD6F00;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FD6F00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e56300;
+}
+
+/* ===== Image Carousel ===== */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #FD6F00;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ===== Admin Panel ===== */
+.admin-sidebar {
+  background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);
+  border-right: 1px solid rgba(253, 111, 0, 0.2);
+}
+
+.admin-nav-link {
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  color: #aaa;
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+  background: rgba(253, 111, 0, 0.15);
+  color: #FD6F00;
+}
+
+.admin-card {
+  background: #2a2a2a;
+  border: 1px solid rgba(253, 111, 0, 0.15);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.admin-card:hover {
+  border-color: rgba(253, 111, 0, 0.4);
+}
+
+.admin-input {
+  background: #2a2a2a;
+  border: 2px solid rgba(253, 111, 0, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: white;
+  width: 100%;
+  font-family: 'Urbanist', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.admin-input:focus {
+  border-color: #FD6F00;
+  outline: none;
+}
+
+.admin-input::placeholder {
+  color: #666;
+}
+
+.admin-btn {
+  background: #FD6F00;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Urbanist', sans-serif;
+}
+
+.admin-btn:hover {
+  background: #e56300;
+  transform: translateY(-1px);
+}
+
+.admin-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.admin-btn-danger {
+  background: #dc2626;
+}
+
+.admin-btn-danger:hover {
+  background: #b91c1c;
+}
+
+.admin-btn-outline {
+  background: transparent;
+  border: 2px solid #FD6F00;
+  color: #FD6F00;
+}
+
+.admin-btn-outline:hover {
+  background: rgba(253, 111, 0, 0.1);
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  z-index: 200;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.toast-success {
+  background: #16a34a;
+}
+
+.toast-error {
+  background: #dc2626;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
